@@ -1,0 +1,134 @@
+.mg-header-outer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+a.mg-logo {
+    font-size: 28px;
+    font-family: Mazzard-bold;
+    color: #313131;
+}
+
+.mg-logo span {
+    font-family: Mazzard-medium;
+    font-size: 28px;
+    color: #313131;
+}
+
+.menu-mobile-header, .menu-mobile-toggle {
+    display: none;
+}
+
+.mg-menu > ul.mg-menu-outer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+
+.mg-menu > ul.mg-menu-outer > li:first-child {
+    padding-left: 0;
+}
+.mg-menu > ul.mg-menu-outer > li {
+    padding: 0 15px;
+}
+
+.mg-menu > ul > li {
+    display: inline-block;
+}
+
+.mg-menu > ul.mg-menu-outer > li > a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #efeded;
+    padding: 25px 0;
+    font-family: 'Mazzard-medium';
+    letter-spacing: 0.5px;
+}
+.mg-menu > ul > li > a {
+    position: relative;
+}
+
+.mg-sub-menu-outer {
+    padding-top: 20px;
+    position: absolute;
+}
+
+.mg-sub-menu-outer {
+    padding-top: 20px;
+    position: absolute;
+}
+
+.mg-menu > ul > li .menu-subs {
+    position: absolute;
+    z-index: 109;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    transition: all 0.5s
+ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* padding: 12px 30px; */
+    min-width: max-content;
+}
+
+.mg-menu-outer .menu-subs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mg-menu-outer .menu-subs ul li {
+    padding: 8px 20px;
+    text-align: left;
+}
+
+.mg-menu > ul.mg-menu-outer > li > a:hover, .mg-menu > ul.mg-menu-outer > li > a:focus, .mg-menu > ul.mg-menu-outer > li > a:active {
+    color: #e9e6e6;
+    transition: all 0.3s
+ease-in;
+}
+
+.mg-menu > ul > li > a {
+    position: relative;
+}
+
+.mg-menu-outer .menu-subs ul li:hover {
+    background-color: #F2C94C;
+    position: relative;
+}
+
+.mg-menu-outer .menu-subs ul li a:hover, .mg-menu-outer .menu-subs ul li a:focus, .mg-menu-outer .menu-subs ul li a:active {
+    color: #171717;
+}
+.mg-menu > ul > li .menu-subs > ul > li > a {
+    display: inline-block;
+}
+.mg-menu-outer .menu-subs ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #171717;
+    font-family: 'Mazzard-medium';
+}
+
+.custom-input .form-control {
+    flex: 0 0 60% !important;  
+    max-width: 60% !important;
+}
+
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1650px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+    .mg-menu > ul > li.menu-item-has-children:hover .menu-subs {
+        opacity: 1;
+        visibility: visible;
+    }
+}
