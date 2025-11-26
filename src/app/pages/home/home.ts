@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Banner } from "../../layouts/banner/banner";
 import { Navbar } from "../../layouts/navbar/navbar";
-import { Body } from "../../layouts/body/body";
+import { Footer } from "../../layouts/footer/footer";
+import { RouterOutlet } from "@angular/router";
+
 
 @Component({
   selector: 'app-home',
-  imports: [Banner, Navbar, Body],
+  imports: [Banner, Navbar, Footer, RouterOutlet],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
