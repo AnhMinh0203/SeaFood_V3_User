@@ -1,8 +1,9 @@
-.container-products{
+.container-products {
     padding: 10px;
     background-color: #f3f1ed;
     border-radius: 20px;
 }
+
 .mg-product-box {
     padding: 12px;
     border: 1px solid #e4e4e4;
@@ -20,7 +21,8 @@
 .mg-product-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Đảm bảo hình ảnh không bị méo và luôn fill đầy box */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị méo và luôn fill đầy box */
 }
 
 .mg-p-badges {
@@ -79,17 +81,18 @@
     text-decoration: none;
 }
 
-.mg-shopping-icon i{
+.mg-shopping-icon i {
     padding: 16px;
     background-color: #eae0cc;
     border-radius: 50%;
 }
-.mg-shopping-icon i:hover{
+
+.mg-shopping-icon i:hover {
     opacity: 0.6;
 }
 
 .products-see-more,
-.products-see-more{
+.products-see-more {
     background-color: var(--color-primary);
     color: #F2F2EC;
     border-radius: 60px;
@@ -98,37 +101,43 @@
     transition: all 0.2s ease-in;
 }
 
-.products-title span{
-    font-family: 'Arial', sans-serif; /* Thay đổi font-family */
-    font-weight: 700; /* Điều chỉnh font-weight */
+.products-see-more a {
+    color: #F2F2EC;
+    text-decoration: none;
+}
+
+.products-title span {
+    font-family: 'Arial', sans-serif;
+    /* Thay đổi font-family */
+    font-weight: 700;
+    /* Điều chỉnh font-weight */
     font-size: 30px;
 }
 
 .intro_service {
-  gap: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
 .service-block {
-  flex: 1 1 calc(20% - 20px);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    flex: 1 1 calc(20% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .service-block h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .service-block p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
 }
-

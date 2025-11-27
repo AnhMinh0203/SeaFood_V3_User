@@ -1,1 +1,57 @@
-<p>product works!</p>
+<app-navbar></app-navbar>
+<app-banner></app-banner>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12 col-sm-5 col-md-5">
+            <div class="product_images">
+                <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" 
+                    [containerStyle]="{ 'max-width': '640px' }" [numVisible]="7" [circular]="true">
+                    <ng-template #item let-item>
+                        <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+                    </ng-template>
+                    <ng-template #thumbnail let-item>
+                        <img [src]="item.thumbnailImageSrc" style="width: 100%; display: block;" />
+                    </ng-template>
+                </p-galleria>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4">
+            <div class="product_info">
+                <div class="product_info--name">
+                    <h3>Chả mực hạ long</h3>
+                </div>
+                <div class="product_info--size">
+                    <b>Size:</b> 20-28 miếng/ kg
+                </div>
+                <div class="product_info--status">
+                    <b>Tình trạng: </b> Đông lạnh. Đã làm chín
+                </div>
+                <div class="product_info--origin">
+                    <b>Xuất xứ:</b> Quảng ninh
+                </div>
+                <div class="product_info--price">
+                    400,000đ
+                </div>
+
+                <div class="product_info--unit">
+                    <b>Chọn: </b> <span>Hộp 250g </span> <span>Hộp 500g </span>
+                </div>
+                <div class="product_info--quality">
+                    <p-inputgroup>
+                        <p-inputgroup-addon>
+                            <p-button icon="pi pi-minus" severity="secondary" />
+                        </p-inputgroup-addon>
+                        <p-inputnumber inputId="integeronly" [(ngModel)]="value1" />
+                        <p-inputgroup-addon>
+                            <p-button icon="pi pi-plus" severity="secondary" />
+                        </p-inputgroup-addon>
+                    </p-inputgroup>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3">
+            3
+        </div>
+    </div>
+</div>
