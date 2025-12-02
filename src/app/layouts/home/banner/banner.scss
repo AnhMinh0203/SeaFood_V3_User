@@ -11,7 +11,7 @@ body {
 }
 
 .mg-main-banner-section {
-    background-image: url(../../../../public/assets/images/home1-banner-img.png);
+    background-image: url(../../../../../public/assets/images/home1-banner-img.png);
     background-size: cover;
 }
 
@@ -40,7 +40,7 @@ body {
 
 .mg-banner-text-inner h3:before {
     content: "";
-    background-image: url(../../../../public/assets/images/single-Leaf.png);
+    background-image: url(../../../../../public/assets/images/single-Leaf.png);
     position: absolute;
     width: 60px;
     height: 110px;
@@ -114,7 +114,7 @@ body {
 
 .mg-banner-text-inner h3:before {
     content: "";
-    background-image: url(../../../../public/assets/images/single-Leaf.png);
+    // background-image: url(../../../../public/assets/images/single-Leaf.png);
     position: absolute;
     width: 60px;
     height: 110px;
