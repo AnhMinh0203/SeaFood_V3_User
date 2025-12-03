@@ -1,0 +1,83 @@
+
+<div class="product_comment">
+    <div class="comment_title my-3 w-100">
+        <h3>BÌNH LUẬN (0)</h3>
+    </div>
+
+    <div class="comment_container my-5">
+        <!-- Comment item -->
+        <div class="comment_item mb-2 d-flex">
+            <div class="comment_item--avatar ">
+                <i class="pi pi-user" style="font-size: 1.6rem"></i>
+            </div>
+            <div class="comment_item--info  d-flex flex-column">
+                <div class="item_info--name">
+                    abc
+                </div>
+                <div class="item_info--content">
+                    bcd
+                </div>
+            </div>
+            <div class="comment_item--reply" (click)="toggleReplyForm('abc')">
+                <i class="pi pi-reply"></i>
+                <span class="ms-2">Trả lời</span>
+            </div>
+        </div>
+
+        <!-- Comment reply item -->
+        <div class="comment_item ms-5 d-flex d-none">
+            <div class="comment_item--avatar ">
+                <i class="pi pi-user" style="font-size: 1.6rem"></i>
+            </div>
+            <div class="comment_item--info  d-flex flex-column">
+                <div class="item_info--name">
+                    abc
+                </div>
+                <div class="item_info--content">
+                    bcd
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <!-- Comment reply form -->
+        @if (showReplyForm){
+        <div class="product_comment--reply">
+            <h4>Trả lời người dùng {{currentReplyingTo}}</h4>
+            <div class="comment_reply--content">
+                <textarea pTextarea [(ngModel)]="value2" placeholder="Normal" rows="3"></textarea>
+            </div>
+            <div class="comment_reply--info d-flex">
+                <div class="reply_info--number">
+                    <input pInputText [(ngModel)]="value2" type="text" placeholder="Nhập số điện thoại" />
+                </div>
+                <div class="reply_info--name">
+                    <input pInputText [(ngModel)]="value2" type="text" placeholder="Nhập họ tên" />
+                </div>
+            </div>
+            <div class="comment_reply--action d-flex justify-content-end gap-3">
+                <p-button label="Hủy" severity="secondary" (onClick)="cancelReply()"></p-button>
+                <p-button label="Gửi bình luận" (onClick)="submitReply()"></p-button>
+            </div>
+        </div>
+        }
+    </div>
+
+    <div class="comment_input my-3">
+        <h4 class="my-3">Nội dung bình luận</h4>
+        <div class="comment_input--content">
+            <textarea pTextarea [(ngModel)]="value2" placeholder="Nhập bình luận" rows="3"></textarea>
+        </div>
+        <div class="comment_input--info d-flex">
+            <div class="input_info--number">
+                <input pInputText [(ngModel)]="value2" type="text" placeholder="Nhập số điện thoại" />
+            </div>
+            <div class="input_info--name">
+                <input pInputText [(ngModel)]="value2" type="text" placeholder="Nhập họ tên" />
+            </div>
+        </div>
+        <div class="comment_input--action d-flex justify-content-end gap-3">
+            <p-button label="Gửi bình luận" (onClick)="submitReply()"></p-button>
+        </div>
+    </div>
+</div>

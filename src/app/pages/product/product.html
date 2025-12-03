@@ -1,185 +1,25 @@
-<!-- <app-navbar></app-navbar>
-<app-banner></app-banner> -->
-
+<app-navbar></app-navbar>
 <div class="container my-3">
     <div class="row">
         <div class="col-12 col-sm-5 col-md-5">
-            <div class="product_images mt-3">
-                <p-galleria [value]="images" [responsiveOptions]="responsiveOptions"
-                    [containerStyle]="{ 'max-width': '640px' }" [numVisible]="7" [circular]="true">
-                    <ng-template #item let-item>
-                        <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
-                    </ng-template>
-                    <ng-template #thumbnail let-item>
-                        <img [src]="item.thumbnailImageSrc" style="width: 100%; display: block;" />
-                    </ng-template>
-                </p-galleria>
-            </div>
+            <app-product-image></app-product-image>
         </div>
         <div class="col-12 col-sm-4 col-md-4">
-            <div class="product_info my-2">
-                <div class="mb-2 product_info--name">
-                    <h3>Chả mực hạ long</h3>
-                </div>
-                <div class="mb-2 product_info--size">
-                    <b>Size:</b> 20-28 miếng/ kg
-                </div>
-                <div class="mb-2 product_info--status">
-                    <b>Tình trạng: </b> Đông lạnh. Đã làm chín
-                </div>
-                <div class="mb-2 product_info--origin">
-                    <b>Xuất xứ:</b> Quảng ninh
-                </div>
-                <div class="mb-2 product_info--price">
-                    <b>Giá: </b> 400,000đ
-                </div>
-
-                <div class="mb-2 product_info--unit">
-                    <b>Chọn: </b> 
-                    <span class="me-2 option-tag">
-                        <p-tag 
-                            [rounded]="true" 
-                            (click)="selectUnitOption('250g')"
-                            [severity]="selectedUnitOption == '250g' ? 'success' : 'secondary'"
-                            value="Hộp 250g" 
-                        /> 
-                    </span> 
-                    <span class="me-2 option-tag">
-                        <p-tag 
-                            [rounded]="true" 
-                            (click)="selectUnitOption('500g')"
-                            [severity]="selectedUnitOption == '500g' ? 'success': 'secondary'"
-                            value="Hộp 500g" 
-                        />  
-                    </span>
-                </div>
-                <div class="mb-2 product_info--quality ">
-                    <b>Số lượng: </b>
-                    <p-inputgroup>
-                        <p-inputgroup-addon>
-                            <p-button icon="pi pi-minus" severity="secondary" />
-                        </p-inputgroup-addon>
-                        <p-inputnumber inputId="integeronly" [style.flex]="'0 0 60px'" [style.width.px]="60"
-                            [(ngModel)]="value1" />
-                        <p-inputgroup-addon>
-                            <p-button icon="pi pi-plus" severity="secondary" />
-                        </p-inputgroup-addon>
-                    </p-inputgroup>
-                </div>
-            </div>
-            <div class="product_action my-3 d-flex">
-                <div class="product_action--buy w-100">
-                    <p-button 
-                        label="Thêm giỏ hàng"  
-                        styleClass="w-100" 
-                        [rounded]="true" 
-                        severity="success" 
-                        icon="pi pi-cart-plus"
-                    />
-                </div>
-                <div class="product_action--addCart w-100 ms-2">
-                    <p-button 
-                        label="Mua ngay"  
-                        styleClass="w-100" 
-                        [rounded]="true" 
-                        severity="danger" 
-                        icon="pi pi-shopping-bag"
-                    />
-                </div>
-            </div>
-            <div class="product_advice">
-                <span class="my-2">Hoặc</span><br>
-                <b>Để lại số điện thoại để được tư vấn </b>
-                <p-inputgroup class="my-3">
-                    <input pInputText placeholder="Nhập số điện thoại" />
-                    <p-button label="Gửi" />
-                </p-inputgroup>
-            </div>
+            <app-product-info></app-product-info>
         </div>
         <div class="col-12 col-sm-3 col-md-3">
-            <p-panel header="Tư vấn đặt hàng">
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-users" style="font-size: 1.4rem"></i>
-                    <div class="advice_infor">
-                        <div class="advice_infor--number">1234567890</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Hàng chính hãng 100%</span>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Uy tín chất lượng</span>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Hỗ trợ liên tục trong quá trình sd</span>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Giao hàng trên toàn quốc</span>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Thanh toán tại nhà hoặc qua thẻ</span>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <i class="pi pi-check-circle me-2" style="color: green"></i>
-                     <span>Quà tặng và khuyến mãi</span>
-                </div>
-            </p-panel>
+            <app-product-benefits></app-product-benefits>
         </div>
     </div>
 
     <div class="row mt-5">
         <div class="col-12 col-sm-8 col-md-8">
-            <div class="product_infor">
-                <p>
-                    Tôm hùm tasmania Úc khổng lồ là loài tôm biển khá hot hiện nay và được rất nhiều người quan tâm đến. Vậy vì sao chúng nổi tiếng đến thế, hãy cùng Haisan.online tìm hiểu về loài tôm đặc biệt ấy ngay trong bài viết này.
-                </p>
-                <img src="assets/images/product_details/img.jpg" alt="">
-                <p>Tôm hùm tasminia Úc có đặc điểm nổi bật chính là hàm lượng chất béo không bão hòa. Chúng phù hợp với cả những người đang trong chế độ giảm cân nghiêm ngặt. Ngoài ra trong tôm hùm Úc còn có chất astaxanthin chống lão hóa, giảm thiểu nếp nhăn cho chị em phụ nữ.
-
-                    Hơn hết với hàm lượng protein, canxi và vitamin dồi dào, thịt tôm hùm Úc giúp cải thiện tình trạng cao huyết áp, tim mạch và tốt cho sự phát triển não bộ. Bạn biết không, trong thịt tôm hùm tasminia Úc còn chứa nhiều testosterone rất tốt cho nam giới. Bởi thế nên chúng được rất nhiều chuyên gia dinh dưỡng hàng đầu thế giới khuyên dùng.</p>
-            </div>
-            
+            <app-product-describe></app-product-describe>
+            <app-product-social></app-product-social>
+            <app-product-comment></app-product-comment>        
         </div>
         <div class="col-12 col-sm-4 col-md-4">
-            <div class="product_news">
-                <p-panel header="Tin tức">
-                    <div class="new_item d-flex">
-                        <div class="new_item--image">
-                            <img src="assets/images/news/img1.jpg" alt="">
-                        </div>
-                        <div class="new_item--title d-flex align-items-center ">
-                            <a href="">
-                                Ốc Gai Nấu Gì Ngon? Mách Bạn 07 Cách Chế Biến Ốc Gai Ăn Là Ghiền 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="new_item d-flex">
-                        <div class="new_item--image">
-                            <img src="assets/images/news/img3.jpg" alt="">
-                        </div>
-                        <div class="new_item--title d-flex align-items-center ">
-                            <a href="">
-                                Ốc Gai Nấu Gì Ngon? Mách Bạn 07 Cách Chế Biến Ốc Gai Ăn Là Ghiền 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="new_item d-flex">
-                        <div class="new_item--image">
-                            <img src="assets/images/news/img2.jpg" alt="">
-                        </div>
-                        <div class="new_item--title d-flex align-items-center ">
-                            <a href="">
-                                Ốc Gai Nấu Gì Ngon? Mách Bạn 07 Cách Chế Biến Ốc Gai Ăn Là Ghiền 
-                            </a>
-                        </div>
-                    </div>
-                </p-panel>
-            </div>
+            <app-product-related-content></app-product-related-content>
         </div>
     </div>
 </div>

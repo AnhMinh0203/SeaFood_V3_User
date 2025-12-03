@@ -1,0 +1,70 @@
+.relate_item,
+.new_item {
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.relate_item:hover,
+.new_item:hover {
+    background-color: #f8f9fa;
+}
+.relate_item--image,
+.new_item--image {
+    flex: 0 0 100px;
+    height: 70px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f0f2f5;
+}
+.relate_item--image img,
+.new_item--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.relate_item:hover .relate_item--image img,
+.new_item:hover .new_item--image img {
+    transform: scale(1.05);
+}
+
+.relate_item--title,
+.new_item--title {
+    flex: 1;
+}
+
+.relate_item--title a,
+.new_item--title a {
+    color: #2d3748;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+.relate_item--title a:hover,
+.new_item--title a:hover {
+    color: #3182ce;
+}
+
+/* CSS cho thẻ h5 (giá sản phẩm) */
+.relate_item--title h5 {
+    margin-top: 0.5rem; 
+    margin-bottom: 0;
+    color: #e53e3e; 
+    font-weight: 600; 
+    font-size: 1.1rem; 
+
+}
+
+/* Hiệu ứng chuyển màu khi hover */
+.relate_item:hover .relate_item--title h5 {
+    color: #c53030; 
+}

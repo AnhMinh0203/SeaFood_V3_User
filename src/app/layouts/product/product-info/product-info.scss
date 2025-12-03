@@ -1,0 +1,45 @@
+.option-tag ::ng-deep .p-tag:not(.p-tag-success) {
+    background-color: #e5e7eb; 
+    color: #475569;
+    font-size: 13px;
+}
+
+.option-tag ::ng-deep .p-tag:hover {
+    opacity: 0.7;
+}
+
+.product_advice {
+    position: relative;
+    text-align: center;
+}
+
+.product_advice span {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.product_advice span:before {
+    content: "";
+    border-top: 1px solid #bfc7d1;
+    width: 100px; /* Điều chỉnh độ dài */
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Đặt bên trái chữ */
+    transform: translateY(-50%);
+}
+
+.product_advice span:after {
+    content: "";
+    border-top: 1px solid #bfc7d1;
+    width: 100px; /* Điều chỉnh độ dài */
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Đặt bên phải chữ */
+    transform: translateY(-50%);
+}
+
+
+
+
+

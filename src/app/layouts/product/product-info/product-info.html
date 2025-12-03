@@ -1,0 +1,57 @@
+<div class="product_info my-2">
+    <div class="mb-2 product_info--name">
+        <h3>Chả mực hạ long</h3>
+    </div>
+    <div class="mb-2 product_info--size">
+        <b>Size:</b> 20-28 miếng/ kg
+    </div>
+    <div class="mb-2 product_info--status">
+        <b>Tình trạng: </b> Đông lạnh. Đã làm chín
+    </div>
+    <div class="mb-2 product_info--origin">
+        <b>Xuất xứ:</b> Quảng ninh
+    </div>
+    <div class="mb-2 product_info--price">
+        <b>Giá: </b> 400,000đ
+    </div>
+
+    <div class="mb-2 product_info--unit">
+        <b>Chọn: </b>
+        <span class="me-2 option-tag">
+            <p-tag [rounded]="true" (click)="selectUnitOption('250g')"
+                [severity]="selectedUnitOption == '250g' ? 'success' : 'secondary'" value="Hộp 250g" />
+        </span>
+        <span class="me-2 option-tag">
+            <p-tag [rounded]="true" (click)="selectUnitOption('500g')"
+                [severity]="selectedUnitOption == '500g' ? 'success': 'secondary'" value="Hộp 500g" />
+        </span>
+    </div>
+    <div class="mb-2 product_info--quality ">
+        <b>Số lượng: </b>
+        <p-inputgroup>
+            <p-inputgroup-addon>
+                <p-button icon="pi pi-minus" severity="secondary" />
+            </p-inputgroup-addon>
+            <p-inputnumber inputId="integeronly" [style.flex]="'0 0 60px'" [style.width.px]="60" [(ngModel)]="value1" />
+            <p-inputgroup-addon>
+                <p-button icon="pi pi-plus" severity="secondary" />
+            </p-inputgroup-addon>
+        </p-inputgroup>
+    </div>
+</div>
+<div class="product_action my-3 d-flex">
+    <div class="product_action--buy w-100">
+        <p-button label="Thêm giỏ hàng" styleClass="w-100" [rounded]="true" severity="success" icon="pi pi-cart-plus" />
+    </div>
+    <div class="product_action--addCart w-100 ms-2">
+        <p-button label="Mua ngay" styleClass="w-100" [rounded]="true" severity="danger" icon="pi pi-shopping-bag" />
+    </div>
+</div>
+<div class="product_advice">
+    <span class="my-2">Hoặc</span><br>
+    <b>Để lại số điện thoại để được tư vấn </b>
+    <p-inputgroup class="my-3">
+        <input pInputText placeholder="Nhập số điện thoại" />
+        <p-button label="Gửi" />
+    </p-inputgroup>
+</div>

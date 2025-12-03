@@ -1,9 +1,10 @@
 .mg-header-outer {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: transparent;
-    position: absolute;
+    // position: absolute;
     width: 100%;
+    background-color: #f3f1ed;
 }
 
 a.mg-logo {
@@ -43,7 +44,7 @@ a.mg-logo {
 .mg-menu > ul.mg-menu-outer > li > a {
     font-size: 15px;
     text-decoration: none;
-    color: #efeded;
+    color: #232323;
     padding: 25px 0;
     font-family: 'Mazzard-medium';
     letter-spacing: 0.5px;
@@ -86,8 +87,10 @@ ease;
     text-align: left;
 }
 
-.mg-menu > ul.mg-menu-outer > li > a:hover, .mg-menu > ul.mg-menu-outer > li > a:focus, .mg-menu > ul.mg-menu-outer > li > a:active {
-    color: #e9e6e6;
+.mg-menu > ul.mg-menu-outer > li > a:hover, 
+.mg-menu > ul.mg-menu-outer > li > a:focus, 
+.mg-menu > ul.mg-menu-outer > li > a:active {
+    color: #232222;
     transition: all 0.3s
 ease-in;
 }

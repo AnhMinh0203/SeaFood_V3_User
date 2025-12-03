@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Banner } from "../../layouts/home/banner/banner";
-import { Navbar } from "../../layouts/share/navbar/navbar";
-import { Footer } from "../../layouts/share/footer/footer";
+import { Navbar } from "../../layouts/shared/navbar/navbar";
+import { Footer } from "../../layouts/shared/footer/footer";
 import { RouterOutlet } from "@angular/router";
 
 

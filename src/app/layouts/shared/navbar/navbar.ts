@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
-
-import { InputGroupModule } from 'primeng/inputgroup';
-import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { ButtonModule } from 'primeng/button';
+import { SHARED_PRIMENG_MODULES } from '../../../core/shared/ui/shared-ui-imports';
 import { BadgeModule } from 'primeng/badge';
 import { OverlayBadgeModule } from 'primeng/overlaybadge';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   imports: [
-    InputGroupModule,
-    InputGroupAddonModule,
-    ButtonModule,
+    SHARED_PRIMENG_MODULES,
     BadgeModule,
     OverlayBadgeModule
   ],
@@ -20,4 +16,9 @@ import { OverlayBadgeModule } from 'primeng/overlaybadge';
 })
 export class Navbar {
 
+  constructor(private router: Router) { }
+
+  onClickCart() {
+    this.router.navigate(['cart']);
+  }
 }

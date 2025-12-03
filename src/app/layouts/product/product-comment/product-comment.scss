@@ -1,0 +1,154 @@
+.comment_item {
+    padding: 1.25rem;
+    gap: 1.4rem;
+}
+
+.comment_item--avatar {
+    flex: 0 0 40px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 50%;
+    color: white;
+}
+
+.comment_item--info {
+    flex: 1;
+}
+
+.item_info--name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.item_info--content {
+    color: #4b5563;
+    line-height: 1.5;
+    padding-right: 1rem;
+}
+
+.comment_item--reply {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #6366f1;
+    font-weight: 500;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+.comment_item--reply:hover {
+    background-color: #eef2ff;
+    color: #4f46e5;
+}
+
+.comment_item--reply i {
+    font-size: 1.1rem;
+    margin-right: 0.25rem;
+}
+
+/* Hiệu ứng khi click */
+.comment_item--reply:active {
+    transform: translateY(1px);
+}
+
+/* Container chính cho phần reply */
+.product_comment--reply {
+  margin-left: 40px; /* Thụt lề để phân biệt với comment cha */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4f46e5; /* Dải màu nhận diện reply */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Hiệu ứng góc */
+.product_comment--reply::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(79, 70, 229, 0.1), transparent);
+}
+
+/* Tiêu đề */
+.product_comment--reply h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+}
+
+.product_comment--reply h4::before {
+  content: "↳ ";
+  color: #4f46e5;
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+/* Textarea */
+.comment_input--content,
+.comment_reply--content {
+  margin-bottom: 15px;
+}
+
+.comment_input--content textarea,
+.comment_reply--content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.comment_input--content textarea:focus,
+.comment_reply--content textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Khung thông tin */
+.comment_input--info,
+.comment_reply--info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.input_info--number,
+.input_info--name,
+.reply_info--number,
+.reply_info--name {
+  flex: 1;
+}
+.comment_input--info input,
+.comment_reply--info input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+.comment_input--info input:focus,
+.comment_reply--info input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
