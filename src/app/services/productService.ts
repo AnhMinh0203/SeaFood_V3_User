@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
-    
-@Injectable()
+import { Product } from '../core/entities/product';
+
+@Injectable({
+  providedIn: 'root'   
+})
 export class ProductService {
     getProductsData() {
         return [
@@ -10,7 +13,7 @@ export class ProductService {
                 name: 'Bamboo Watch',
                 description: 'Product Description',
                 image: 'bamboo-watch.jpg',
-                price: 65,
+                price: 65000,
                 category: 'Accessories',
                 quantity: 24,
                 inventoryStatus: 'INSTOCK',
@@ -22,7 +25,7 @@ export class ProductService {
                 name: 'Black Watch',
                 description: 'Product Description',
                 image: 'black-watch.jpg',
-                price: 72,
+                price: 72000,
                 category: 'Accessories',
                 quantity: 61,
                 inventoryStatus: 'OUTOFSTOCK',
@@ -34,7 +37,7 @@ export class ProductService {
                 name: 'Blue Band',
                 description: 'Product Description',
                 image: 'blue-band.jpg',
-                price: 79,
+                price: 79000,
                 category: 'Fitness',
                 quantity: 2,
                 inventoryStatus: 'LOWSTOCK',
@@ -46,7 +49,7 @@ export class ProductService {
                 name: 'Blue T-Shirt',
                 description: 'Product Description',
                 image: 'blue-t-shirt.jpg',
-                price: 29,
+                price: 29000,
                 category: 'Clothing',
                 quantity: 25,
                 inventoryStatus: 'INSTOCK',
@@ -58,7 +61,7 @@ export class ProductService {
                 name: 'Bracelet',
                 description: 'Product Description',
                 image: 'bracelet.jpg',
-                price: 15,
+                price: 15000,
                 category: 'Accessories',
                 quantity: 73,
                 inventoryStatus: 'INSTOCK',
@@ -70,7 +73,7 @@ export class ProductService {
                 name: 'Brown Purse',
                 description: 'Product Description',
                 image: 'brown-purse.jpg',
-                price: 120,
+                price: 120000,
                 category: 'Accessories',
                 quantity: 0,
                 inventoryStatus: 'OUTOFSTOCK',
@@ -82,7 +85,7 @@ export class ProductService {
                 name: 'Chakra Bracelet',
                 description: 'Product Description',
                 image: 'chakra-bracelet.jpg',
-                price: 32,
+                price: 32000,
                 category: 'Accessories',
                 quantity: 5,
                 inventoryStatus: 'LOWSTOCK',
@@ -94,7 +97,7 @@ export class ProductService {
                 name: 'Galaxy Earrings',
                 description: 'Product Description',
                 image: 'galaxy-earrings.jpg',
-                price: 34,
+                price: 34000,
                 category: 'Accessories',
                 quantity: 23,
                 inventoryStatus: 'INSTOCK',
@@ -106,7 +109,7 @@ export class ProductService {
                 name: 'Game Controller',
                 description: 'Product Description',
                 image: 'game-controller.jpg',
-                price: 99,
+                price: 99000,
                 category: 'Electronics',
                 quantity: 2,
                 inventoryStatus: 'LOWSTOCK',
@@ -118,7 +121,7 @@ export class ProductService {
                 name: 'Gaming Set',
                 description: 'Product Description',
                 image: 'gaming-set.jpg',
-                price: 299,
+                price: 299000,
                 category: 'Electronics',
                 quantity: 63,
                 inventoryStatus: 'INSTOCK',
@@ -130,7 +133,7 @@ export class ProductService {
                 name: 'Gold Phone Case',
                 description: 'Product Description',
                 image: 'gold-phone-case.jpg',
-                price: 24,
+                price: 24000,
                 category: 'Accessories',
                 quantity: 0,
                 inventoryStatus: 'OUTOFSTOCK',
@@ -142,13 +145,13 @@ export class ProductService {
                 name: 'Green Earbuds',
                 description: 'Product Description',
                 image: 'green-earbuds.jpg',
-                price: 89,
+                price: 89000,
                 category: 'Electronics',
                 quantity: 23,
                 inventoryStatus: 'INSTOCK',
                 rating: 4
             },
-            
+
         ];
     }
 
@@ -162,6 +165,18 @@ export class ProductService {
 
     getProducts() {
         return Promise.resolve(this.getProductsData());
+    }
+
+    // getProductsByName(productName: any) {
+    //     const products = this.getProductsData();
+    //     const result = products.filter(p => p.name === productName);
+    //     return Promise.resolve(result);
+    // }
+
+    getProductsByName(productName: string): Promise<Product | undefined> {
+        const products = this.getProductsData();
+        const product = products.find(p => p.name === productName);
+        return Promise.resolve(product);
     }
 
     // getProductsWithOrdersSmall() {

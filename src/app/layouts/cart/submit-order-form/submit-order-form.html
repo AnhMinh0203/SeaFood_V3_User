@@ -1,0 +1,77 @@
+<p-toast [breakpoints]="{ '920px': { width: '50%', right: 'auto' } }" />
+<p-dialog header="Xác nhận đơn hàng" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }"
+    [draggable]="false" [resizable]="false" (onHide)="onDialogHide()">
+
+    <ng-template pTemplate="header">
+        <h3 class="text-center">Thông tin đơn hàng</h3>
+    </ng-template>
+
+    <div class="order-summary">
+        <div class="order-header mb-4">
+            <!-- <h4 class="mb-1">Tổng cộng: {{ orderData?.total | currency:'VND':'symbol':'1.0-0' }}</h4> -->
+            <!-- <small class="text-muted">Ngày đặt hàng: {{ today | date:'dd/MM/yyyy HH:mm' }}</small> -->
+        </div>
+
+        <div class="order-items mb-3">
+            <div class="product-item mb-3" *ngFor="let item of orderData?.products">
+                <div class="d-flex align-items-center">
+                    <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image"
+                        alt="{{item.name}}" style="width: 50px; height: auto;" class="me-2">
+                    <div class="w-100">
+                        <h6 class="mb-0">{{item.name}}</h6>
+                        <div class="text-muted d-flex justify-content-between">
+                            <span>{{(item.price * item.quantity) | currency:'VND':'symbol':'1.0-0'}}</span>
+                            <small>x{{(item.quantity)}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shipping-info">
+            <h5 class="mb-3">Thông tin giao hàng:</h5>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <p-floatlabel variant="on">
+                        <input pInputText id="name_input" class="w-100" [(ngModel)]="shippingInfo.name"
+                            autocomplete="off" />
+                        <label for="name_input">Tên người nhận</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <p-floatlabel variant="on">
+                        <input pInputText id="phone_input" class="w-100" [(ngModel)]="shippingInfo.phone"
+                            autocomplete="off" />
+                        <label for="phone_input">Số điện thoại</label>
+                    </p-floatlabel>
+                </div>
+            </div>
+            <div class="mb-2">
+                <p-floatlabel variant="on">
+                    <textarea pTextarea id="on_label" class="w-100 h-full" [(ngModel)]="shippingInfo.address" rows="3"
+                        cols="30" style="resize: none">
+                    </textarea>
+                    <label for="on_label">Địa chỉ</label>
+                </p-floatlabel>
+            </div>
+            <div class="mb-2">
+
+                <p-floatlabel variant="on">
+                    <textarea pTextarea id="on_label" class="w-100 h-full" [(ngModel)]="shippingInfo.note" rows="3"
+                        cols="30" style="resize: none">
+                    </textarea>
+                    <label for="on_label">Ghi chú</label>
+                </p-floatlabel>
+            </div>
+        </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <div class="d-flex align-items-center gap-3">
+            <span>Tổng cộng: </span>
+            <h4 class="mb-1">{{ orderData?.total | currency:'VND':'symbol':'1.0-0' }}</h4>
+            <p-button label="Đặt hàng" severity="danger" (onClick)="onSubmit()"></p-button>
+        </div>
+    </ng-template>
+</p-dialog>

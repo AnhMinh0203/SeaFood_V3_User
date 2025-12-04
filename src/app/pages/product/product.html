@@ -5,7 +5,7 @@
             <app-product-image></app-product-image>
         </div>
         <div class="col-12 col-sm-4 col-md-4">
-            <app-product-info></app-product-info>
+            <app-product-info (order)="openOrderConfirmation()"></app-product-info>
         </div>
         <div class="col-12 col-sm-3 col-md-3">
             <app-product-benefits></app-product-benefits>
@@ -24,3 +24,9 @@
     </div>
 </div>
 <app-footer></app-footer>
+
+<app-submit-order-form 
+    [(visible)]="showOrderForm" 
+    [orderData]="{ total: calculateGrandTotal(),  products: product ? [product] : [] }"
+    (onHide)="closeOrderConfirmation()">
+</app-submit-order-form>

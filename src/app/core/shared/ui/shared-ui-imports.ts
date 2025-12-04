@@ -6,6 +6,9 @@ import { PanelModule } from 'primeng/panel';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { FormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+
 export const SHARED_PRIMENG_MODULES = [
   ButtonModule,
   InputTextModule,
@@ -14,5 +17,7 @@ export const SHARED_PRIMENG_MODULES = [
   PanelModule,
   InputGroupModule,
   InputGroupAddonModule,
-  InputNumberModule
+  InputNumberModule,
+  FormsModule,
+  ToastModule
 ] as const;

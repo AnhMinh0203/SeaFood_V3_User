@@ -44,7 +44,7 @@
         <p-button label="Thêm giỏ hàng" styleClass="w-100" [rounded]="true" severity="success" icon="pi pi-cart-plus" />
     </div>
     <div class="product_action--addCart w-100 ms-2">
-        <p-button label="Mua ngay" styleClass="w-100" [rounded]="true" severity="danger" icon="pi pi-shopping-bag" />
+        <p-button label="Mua ngay" styleClass="w-100" [rounded]="true" severity="danger" icon="pi pi-shopping-bag" (click)="onOrderClick()"/>
     </div>
 </div>
 <div class="product_advice">
