@@ -39,6 +39,55 @@
     transform: translateY(-50%);
 }
 
+// Button quantity
+.quantity-control {
+  display: flex;
+  align-items: center;
+
+  
+  .quantity-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+    &:hover {
+      background-color: #e9ecef;
+      border-color: #adb5bd;
+    }
+    
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  
+  .quantity-input {
+    width: 50px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+    }
+  }
+}
 
 
 
